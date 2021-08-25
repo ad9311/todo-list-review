@@ -44,9 +44,10 @@ const clearList = () => {
   manager.renderStorage(list, element);
 };
 
+const events = ['change', 'focusin', 'focusout'];
+const functions = [updateTask, focusOnTask, focusOnTask];
+
 window.addEventListener('load', manager.renderStorage(list, element), false);
-document.getElementById('task-list').addEventListener('change', updateTask, false);
-document.getElementById('task-list').addEventListener('focusin', focusOnTask, false);
-document.getElementById('task-list').addEventListener('focusout', focusOnTask, false);
+functions.forEach((fn, index) => { document.getElementById('task-list').addEventListener(events[index], fn, false); });
 document.getElementById('add-task').addEventListener('keypress', addTaskToList, false);
 document.getElementById('clear').addEventListener('click', clearList, false);
