@@ -1,0 +1,58 @@
+/* CSS Stylesheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Urbanist', sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: hidden;
+  background-color: transparent;
+}
+
+.small-container {
+  margin: 100px auto auto auto;
+  max-width: 500px;
+}
+
+.list-row {
+  padding: 0 10px 0 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(233, 233, 233);
+}
+
+.svg {
+  fill: lightgray;
+  cursor: pointer;
+}
+
+.focused-task {
+  background-color: transparent;
+  transition: all 0.2s ease-out;
+}
+
+.focused-task:focus-within {
+  background-color: rgba(255, 245, 185, 0.781);
+}
+
+.clear {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f6f6f6;
+  color: lightgray;
+}
